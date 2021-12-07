@@ -1,0 +1,22 @@
+input CustomerUpdateInput {
+    custom_attributes: [CustomerAttributeInput] @doc(description: "Customer custom attributes")
+}
+
+input CustomerInput {
+    custom_attributes: [CustomerAttributeInput] @doc(description: "Customer custom attributes")
+}
+
+type Customer {
+    custom_attributes: [CustomerAttribute] @doc(description: "Customer custom attributes")
+}
+
+type CustomerAttribute {
+    attribute_code: String! @doc(description: "Attribute Code of attribute")
+    value: String @doc(description: "Attribute Value of attribute")
+}
+
+
+input CustomerAttributeInput {
+    attribute_code: String! @doc(description: "Attribute code")
+    value: String @doc(description: "Attribute value")
+}
